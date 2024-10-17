@@ -62,45 +62,72 @@
 
 # >>>>> **************************** <<<<<< #
 ### Recurrence of character in the word ###
-word = 'programming'
-char_count={}
-for char in word:
-    if char in char_count:
-        char_count[char]=char_count[char]+1
-    else:
-        char_count[char]=1
-print(char_count)
+# word = 'programming'
+# char_count={}
+# for char in word:
+#     if char in char_count:
+#         char_count[char]=char_count[char]+1
+#     else:
+#         char_count[char]=1
+# print(char_count)
 
 # >>>>> **************************** <<<<<< #
 ### Fibonnacci Series using list comprehension###
 
-fib =[0,1]
-for i in range(5):
-    fib.append(fib[-1]+fib[-2])
-str =list((str(e) for e in fib))
-print(str)
+# fib =[0,1]
+# for i in range(5):
+#     fib.append(fib[-1]+fib[-2])
+# str =list((str(e) for e in fib))
+# print(str)
 
 
 # >>>>> **************************** <<<<<< #
 ### Max,Min and middle element in the list###
 
-lst =[5,7,9,8,1,3,50,20,99]
-max_num=lst[0]
-min_num=lst[0]
-for i in range (len(lst)):
-    if max_num<lst[i]:
-        max_num=lst[i]
-    elif min_num>lst[i]:
-        min_num=lst[i]
-print(f"Max number in List {lst} is = " ,max_num)
-print(f"Min number in List {lst} is = ", min_num)
+# lst =[5,7,9,8,1,3,50,20,99]
+# max_num=lst[0]
+# min_num=lst[0]
+# for i in range (len(lst)):
+#     if max_num<lst[i]:
+#         max_num=lst[i]
+#     elif min_num>lst[i]:
+#         min_num=lst[i]
+# print(f"Max number in List {lst} is = " ,max_num)
+# print(f"Min number in List {lst} is = ", min_num)
+#
+# middle_element = int(len(lst)/2)
+# print("Middle Element: ", lst[middle_element])
 
-middle_element = int(len(lst)/2)
-print("Middle Element: ", lst[middle_element])
+# >>>>> **************************** <<<<<< #
+### Convert list into string###
+# lst = ["p","y","t","h","o","n"]
+# str = ''.join(lst)
+# print(str)
+# print(type(str))
 
+# >>>>> **************************** <<<<<< #
+### Adding 2 list element together ###
 
+lst1 = [1,9,5]
+lst2 = [7,10,11]
+lst3 = []
+lst4 = []
+lst5 = []
+for i in range (0, len(lst1)):
+    lst3.append(lst1[i]+lst2[i])
+    lst4.append((lst1[i],lst2[i]))
 
+for i in lst4:
+    for item in i:
+        lst5.append(item)
 
+print("Result after adding elements in 2 list ", lst3)
+print("Combining 2 lists forming tuple ",lst4)
+print("Converting into one list combing 2 list elements ", lst5)
+
+str = "Harry"
+
+print(str[len(str)-4:len(str)-2])
 
 
 
